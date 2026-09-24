@@ -26,13 +26,13 @@ public class FirstLetters {
      */
     public static String firstLetters(String words) {
         char last = ' ';
-        String output = "";
+        StringBuilder output = new StringBuilder();
         for (char c : words.toCharArray()) {
             if (last == ' ') {
-                output += c;
+                output.append(c);
             }
             last = c;
         }
-        return output;
+        return output.toString();
     }
 }
