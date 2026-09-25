@@ -6,6 +6,7 @@
  *
  * Relevant reading: 1.8.3. while Loops (and 1.2. Variables and Types).
  */
+import java.lang.Math;
 public class DigitSum {
 
     public static void main(String[] args) {
@@ -21,7 +22,15 @@ public class DigitSum {
      * @return the sum of its decimal digits
      */
     public static int digitSum(int n) {
-        // TODO: complete
-        return 0;
+        int s = 0;
+
+        String nString = ((Integer)(Math.abs(n))).toString();
+        char[] nChars = nString.toCharArray();
+
+        for (char c : nChars) {
+            s += Character.digit(c, 10);
+        }
+
+        return s;
     }
 }
